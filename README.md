@@ -1,4 +1,4 @@
-# Put title of your app here
+# Selling Puppy
 
 <!--- Replace <OWNER> with your Github Username and <REPOSITORY> with the name of your repository. -->
 <!--- You can find both of these in the url bar when you open your repository in github. -->
@@ -7,11 +7,13 @@
 
 ## :scroll: Description
 <!--- Describe your app in one or two sentences -->
+Application for pre-sale of pets
 
 
 ## :bulb: Motivation and Context
 <!--- Optionally point readers to interesting parts of your submission. -->
 <!--- What are you especially proud of? -->
+Currently, there is nothing special about it, but I want to be able to sell organic animals on the street.
 
 
 ## :camera_flash: Screenshots
