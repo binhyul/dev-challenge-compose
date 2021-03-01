@@ -1,9 +1,20 @@
+/*
+ * Copyright 2021 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.example.androiddevchallenge.util
 
-import androidx.compose.runtime.*
-import androidx.compose.runtime.livedata.observeAsState
-import androidx.compose.ui.platform.LocalLifecycleOwner
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 
 /**
@@ -34,12 +45,10 @@ open class Event<out T>(private val content: T) {
     fun copy() = Event(content)
 }
 
-
-//@Stable
-//interface EventState<T> : State<T> {
+// @Stable
+// interface EventState<T> : State<T> {
 //   override val value: T
-//}
-
+// }
 
 /**
  * An [Observer] for [Event]s, simplifying the pattern of checking if the [Event]'s content has
@@ -55,11 +64,11 @@ class EventObserver<T>(private val onEventUnhandledContent: (T) -> Unit) : Obser
     }
 }
 
-//@Composable
-//fun <T> LiveData<T>.observeAsEventState(): State<T?> = observeAsEventState(value)
+// @Composable
+// fun <T> LiveData<T>.observeAsEventState(): State<T?> = observeAsEventState(value)
 //
-//@Composable
-//fun <R, T : R> LiveData<T>.observeAsEventState(initial: R): State<R> {
+// @Composable
+// fun <R, T : R> LiveData<T>.observeAsEventState(initial: R): State<R> {
 //    val lifecycleOwner = LocalLifecycleOwner.current
 //    val state = remember { mutableStateOf(initial) }
 //    DisposableEffect(this, lifecycleOwner) {
@@ -68,4 +77,4 @@ class EventObserver<T>(private val onEventUnhandledContent: (T) -> Unit) : Obser
 //        onDispose { removeObserver(observer) }
 //    }
 //    return state
-//}
+// }
